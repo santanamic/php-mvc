@@ -1,0 +1,646 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+
+<h4 class="mt-3">CADASTRO</h4>
+  <form class="needs-validation" novalidate>
+			
+			    <!--Item 1-->
+				<p>
+					<button class="btn btn-primary dropdown-toggle btn-block" id="btn_tamanho" style="width: 100%; margin-top: 20px;" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					Informações Pessoais
+					</button>
+				</p>
+				<div class="collapse" id="collapseExample">
+					<div class="card card-body">                    
+
+						
+							<h5 class="mt-3">Foto</h5>
+							<i class="bi bi-person-circle">
+								<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+								  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+								  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+								</svg>
+							</i>
+							
+							<div class="form-group mt-3 col-md-5">
+								<label for="exampleFormControlFile1"></label>
+								<input type="file" class="form-control-file" id="exampleFormControlFile1">
+							</div>
+							
+							<h5 class="mt-5">Dados pessoais </h5>
+							<div class="row"> 
+								
+								<!--CAMPO NOME-->
+								<div class="col-md-5">
+									<label for="validationCustom01">Nome</label>
+									<input type="text" class="form-control" id="validationCustom03" placeholder="Nome completo" required>
+									<div class="invalid-feedback">
+										Por favor, informe um nome válido.
+									</div>
+								</div>
+
+								<!--CAMPO CPF-->
+								<div class="col-md-3">
+									<label for="validationCustom02">CPF</label>
+									<input type="text" class="form-control" id="validationCustom03" placeholder="CPF" required>
+									<div class="invalid-feedback">
+										Por favor, informe um CPF válido.
+									</div>
+								</div>
+								
+								<!--CAMPO DATA NASCIMENTO---->
+								<div class="col-md-3">
+									<label for="validationCustom01">Data de Nascimento</label>
+									<input type="date" class="form-control" id="validationCustom01" placeholder="Data de Nascimento" required>
+									<div class="invalid-feedback">
+										Por favor, informe uma data válida.
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<!--CAMPO SEXO-->
+								<div class="form-group col-md-3 mt-3">
+									 <label for="inputEstado">Sexo</label>
+									 <select id="inputEstado" class="form-control">
+										<option selected>Selecione</option>
+										<option value="M">Masculino</option>
+										<option value="F">Femenino</option>
+									 </select>
+								</div>
+								
+								 <!--Campo Estado Civil-->
+								<div class="form-group col-md-3 mt-3">
+									 <label for="inputEstado">Estado Civil</label>
+									 <select id="inputEstado" class="form-control">
+										<option selected>Selecione</option>
+										<option value="">Solteiro</option>
+										<option value="">Casado</option>
+										<option value="">Divociado</option>
+									 </select>
+								</div>
+								
+								 <!--CAMPO HABILITAÇÃO-->
+								<div class="form-group col-md-3 mt-3">
+									 <label for="inputEstado">Habilitação</label>
+									 <select id="inputEstado" class="form-control">
+										<option selected>Selecione</option>
+										<option value="">Não possuo</option>
+										<option value="">A</option>
+										<option value="">B</option>
+										<option value="">C</option>
+										<option value="">D</option>
+										<option value="">E</option>
+									 </select>
+								</div>
+
+							</div>
+							
+							<h5 class="mt-5 mb-3">Endereço </h5>	
+							<div class="row">
+								<!--CAMPO ENDEREÇO---->
+								<div class="col-md-6 mb-3">
+									<label for="validationCustom03">Logradouro</label>
+									<input type="text" class="form-control" id="validationCustom03" placeholder="Digite o logradouro e o número da casa" required>
+									<div class="invalid-feedback">
+										Por favor, informe um logradouro válido.
+									</div>
+								</div>
+										
+								<!--CAMPO COMPLEMENTO---->
+								<div class="col-md-4 mb-3">
+									<label for="validationCustom03">Complemento</label>
+									<input type="text" class="form-control" id="validationCustom03" placeholder="Digite o complemento" required>
+									<div class="invalid-feedback">
+										Por favor, informe um complemento válido.
+									</div>
+								</div>
+							</div>		
+							
+							<div class="row">
+								
+								<!--CAMPO CIDADE-->
+								<div class="col-md-6 mb-3">
+									<label for="validationCustom03">Cidade</label>
+									<input type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
+									<div class="invalid-feedback">
+										Por favor, informe uma cidade válida.
+									</div>
+								</div>
+								
+
+								<!--CAMPO ESTADO-->
+								<div class="form-group col-md-3">
+									 <label for="inputEstado">Estado</label>
+									 <select id="inputEstado" class="form-control">
+										<option selected>Selecione</option>
+										<option value="AC">Acre</option>
+										<option value="AL">Alagoas</option>
+										<option value="AP">Amapá</option>
+										<option value="AM">Amazonas</option>
+										<option value="BA">Bahia</option>
+										<option value="CE">Ceará</option>
+										<option value="DF">Distrito Federal</option>
+										<option value="ES">Espírito Santo</option>
+										<option value="GO">Goiás</option>
+										<option value="MA">Maranhão</option>
+										<option value="MT">Mato Grosso</option>
+										<option value="MS">Mato Grosso do Sul</option>
+										<option value="MG">Minas Gerais</option>
+										<option value="PA">Pará</option>
+										<option value="PB">Paraíba</option>
+										<option value="PR">Paraná</option>
+										<option value="PE">Pernambuco</option>
+										<option value="PI">Piauí</option>
+										<option value="RJ">Rio de Janeiro</option>
+										<option value="RN">Rio Grande do Norte</option>
+										<option value="RS">Rio Grande do Sul</option>
+										<option value="RO">Rondônia</option>
+										<option value="RR">Roraima</option>
+										<option value="SC">Santa Catarina</option>
+										<option value="SP">São Paulo</option>
+										<option value="SE">Sergipe</option>
+										<option value="TO">Tocantins</option>
+									 </select>
+								</div>
+
+								<!--CAMPO CEP-->
+								<div class="col-md-3">
+									<label for="validationCustom05">CEP</label>
+									<input type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
+									<div class="invalid-feedback">
+										Por favor, informe um CEP válido.
+									</div>
+								</div>
+							</div>
+							
+							<h5 class="mt-5 mb-3">Informações de contato</h5>
+							<div class="row">
+								<!--CAMPO E-mail-->
+								<div class="col-md-6 mb-3">
+									<label for="validationCustom03">E-mail</label>
+									<input type="email" class="form-control" id="validationCustom03" placeholder="Endereço de e-mail" required>
+									<div class="invalid-feedback">
+										Por favor, informe um e-mail válido.
+									</div>
+								</div>
+							</div> 
+							
+							<!--CAMPO Linkedin-->
+								<div class="col-md-6 mb-3">
+									<label for="validationCustom03">Linkedin</label>
+									<input type="email" class="form-control" id="validationCustom03" placeholder="Linkedin" required>
+									<div class="invalid-feedback">
+										Por favor, informe um Linkedin válido.
+									</div>
+								</div>
+								
+								<!--CAMPO GitHub-->
+								<div class="col-md-6 mb-3">
+									<label for="validationCustom03">GitHub</label>
+									<input type="email" class="form-control" id="validationCustom03" placeholder="GitHub" required>
+									<div class="invalid-feedback">
+										Por favor, informe um GitHub válido.
+									</div>
+								</div>
+							
+							<div class="row">
+								<!--CAMPO celular-->
+								<div class="col-md-4 mb-3">
+									<label for="validationCustom03">Celular</label>
+									<input type="text" class="form-control" id="validationCustom03" placeholder="Número celular" required>
+									<div class="invalid-feedback">
+										Por favor, informe um número de celular válido.
+									</div>
+								</div>
+								
+								<!--CAMPO TELEFONE-->
+								<div class="col-md-4 mb-3">
+									<label for="validationCustom03">Telefone</label>
+									<input type="text" class="form-control" id="validationCustom03" placeholder="Número de telefone" required>
+									<div class="invalid-feedback">
+										Por favor, informe um número de telefone válido.
+									</div>
+								</div>
+							</div> 
+
+					</div>
+				</div>
+				
+				<!--Item 2-->
+				<p>
+					<button class="btn btn-primary dropdown-toggle btn-block" style="width: 100%; margin-top: 20px;" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					Objetivos Profissionais
+					</button>
+				</p>
+				<div class="collapse" id="collapseExample">
+					<div class="card card-body">  
+					
+						<!--CAMPO OBJETIVOS-->
+						<div class="form-group mb-3 mt-4">
+							<label for="exampleFormControlTextarea1">Objetivos Profissionais</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1 invalidCheck" rows="3" required placeholder="Descreva seus Objetivos Profissionais"></textarea>
+							 <div class="invalid-feedback">
+								Você deve preencher este campo
+							 </div>
+						
+						</div>
+						
+						<!--CAMPO Turno de Interesse-->
+							<div class="col-md-4">
+								<label>Pretensão de período</label>
+								<select class="form-control"required>
+									<option selected>Selecione</option>
+									<option value="T">Tarde</option>
+									<option value="M">Manhã</option>
+									<option value="Int">Integral</option>
+									<option value="N">Noite</option>
+									<option value="Ind">Indiferente</option>
+								</select>
+							</div>
+						
+						<h5 class="mt-5 mb-3">Pretensões Profissionais</h5>
+						<!--CAMPO Pretensão salarial -->
+						<div class="col-md-4 mb-3">
+							<label for="validationCustom03">Pretensão salarial</label>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="Pretensão salarial" required>
+							<div class="invalid-feedback">
+								Por favor, informe uma Pretensão salarial válida.
+							</div>
+						</div>
+						<!--CAMPO CIDADES ACEITAS -->
+						<div class="col-md-4 mb-3">
+							<label for="validationCustom03">Cidades aceitas</label>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="Informe uma cidade" required>
+							<div class="invalid-feedback">
+								Por favor, informe uma cidade válida.
+							</div>
+							<button type="button" class="btn btn-primary mt-3">Adicionar cidade</button>
+							<button type="button" class="btn btn-primary mt-3">Remover cidade</button>
+						</div>
+						
+						<div class="row">
+							
+							<!--CAMPO cargo -->
+								<div class="col-md-4 mb-3">
+									<label for="validationCustom03">Cargo</label>
+									<input type="text" class="form-control" id="validationCustom03" placeholder="Cargo" required>
+									<div class="invalid-feedback">
+										Por favor, informe um cargo válido.
+									</div>	
+								</div>
+
+							<!--CAMPO Nível do cargo-->
+							<div class="col-md-4">
+								<label>Nível</label>
+								<select class="form-control">
+									<option selected>Selecione</option>
+									<option value="Estagio">Estágio</option>
+									<option value="Trainee">Trainee</option>
+									<option value="Tec">Técnico</option>
+									<option value="Jr">Junior</option>
+									<option value="Pl">Pleno</option>
+									<option value="Sr">Sênior</option>
+									<option value="Sup">Supervisão/Coordenação</option>
+									<option value="Ger">Gerência</option>
+								</select>
+								
+							</div>
+						</div>
+						
+						<div class="col-md-6">
+							<button type="button" class="btn btn-primary col-md-3 mt-3">Adicionar cargo</button>
+							<button type="button" class="btn btn-primary col-md-3 mt-3">Remover cargo</button>
+						</div>
+
+					</div>
+				</div>
+				
+				<!--Item 3-->
+				<p>
+					<button class="btn btn-primary dropdown-toggle btn-block" style="width: 100%; margin-top: 20px;" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					Formação Academica
+					</button>
+				</p>
+				<div class="collapse" id="collapseExample">
+					<div class="card card-body"> 
+					
+					   <!--CAMPO Nível Escolaridade-->
+						<div class="col-md-4 mt-4">
+							<label>Nível de Escolaridade</label>
+							<select class="form-control">
+								<option selected>Selecione</option>
+								<option value="EFI">Ensino Fundamental Incompleto</option>
+								<option value="EFC">Ensino Fundamental Completo</option>
+								<option value="EMI">Ensino Médio Incompleto</option>
+								<option value="EMC">Ensino Médio Completo</option>
+								<option value="EMCur">Ensino Médio Cursando</option>
+								<option value="ESI">Ensino Superior Incompleto</option>
+								<option value="ESC">Ensino Superior Completo</option>
+								<option value="ESCur">Ensino Superior Cursando</option>
+								<option value="PGE">Pós-Graduação (Especialização)</option>
+								<option value="PGM">Pós-Graduação (Mestrado)</option>
+								<option value="PGD">Pós-Graduação (Doutorado)</option>
+							</select>
+						</div>
+					
+					   <h5 class="mt-5">Formação </h5>	
+					   <!--CAMPO Nome do curso -->
+						<div class="col-md-6 mb-3">
+							<label for="validationCustom03">Nome do curso</label>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="Informe o nome do curso" required>
+							<div class="invalid-feedback">
+								Por favor, informe um nome de curso válido.
+							</div>
+						</div>
+						
+						<!--CAMPO do tipo de curso -->
+						<div class="col-md-6">
+							<label>Grau de Escolaridade</label>
+							<select class="form-control">
+								<option selected>Selecione</option>
+								<option value="EF">Ensino Fundamental</option>
+								<option value="EM">Ensino médio</option>
+								<option value="ES">Ensino Superior</option>
+								<option value="PGE">Pós-Graduação(Especialização)</option>
+								<option value="PGM">Pós-Graduação(Mestrado)</option>
+								<option value="PGD">Pós-Graduação(Doutorado)</option>
+							</select>
+						</div>
+						
+					   <!--CAMPO Instituição de Ensino -->
+						<div class="col-md-6 mt-3">
+							<label for="validationCustom03">Instituição de Ensino</label>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="Informe o nome da instituição de ensino" required>
+							<div class="invalid-feedback">
+								Por favor, informe um nome de Instituição válido.
+							</div>
+						</div>
+						
+						<div class="row">
+							<!--CAMPO DATA DE INÍCIO -->
+							<div class="col-md-3 mt-3">
+								<label for="validationCustom01">Data de Início</label>
+								<input type="date" class="form-control" id="validationCustom01" placeholder="Data de Início" required>
+								<div class="invalid-feedback">
+									Por favor, informe uma data válida.
+								</div>
+							</div>
+							
+							<!--CAMPO DATA DE TÉRMINO -->
+							<div class="col-md-3 mt-3">
+								<label for="validationCustom01">Data de Término</label>
+								<input type="date" class="form-control" id="validationCustom01" placeholder="Data de Término" required>
+								<div class="invalid-feedback">
+									Por favor, informe uma data válida.
+								</div>
+							</div>
+							
+						</div>
+						<div class="col-md-8 mt-3">
+							<button type="button" class="btn btn-primary col-md-4">Adicionar formação</button>
+							<button type="button" class="btn btn-primary col-md-4">Remover formação</button>
+						</div>
+					</div>
+				</div>
+				
+				<!--Item 4-->
+				<p>
+					<button class="btn btn-primary dropdown-toggle btn-block" style="width: 100%; margin-top: 20px;" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					Experiência Profissional
+					</button>
+				</p>
+				<div class="collapse" id="collapseExample">
+					<div class="card card-body"> 
+					
+						<h5 class="mt-4">Experiências</h5>
+						<!--CAMPO NOME DO EMPREGADOR -->
+						<div class="col-md-6 mb-3">
+							<label for="validationCustom03">Empregador</label>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="Informe o nome da empresa" required>
+							<div class="invalid-feedback">
+								Por favor, informe um nome de empresa válida.
+							</div>
+						</div>
+						
+						<!--CAMPO cargo -->
+						<div class="col-md-4 mb-3">
+							<label for="validationCustom03">Cargo</label>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="Cargo" required>
+							<div class="invalid-feedback">
+								Por favor, informe um cargo válido.
+							</div>
+						</div>
+						
+						<div class="row"
+							<!--CAMPO CIDADE -->
+							<div class="col-md-4 mb-3">
+								<label for="validationCustom03">Cidade</label>
+								<input type="text" class="form-control" id="validationCustom03" placeholder="Informe o nome da cidade" required>
+								<div class="invalid-feedback">
+									Por favor, informe uma cidade válida.
+								</div>
+							</div>
+							
+							<div class="form-group col-md-3">
+									 <label for="inputEstado">Estado</label>
+									 <select id="inputEstado" class="form-control">
+										<option selected>Selecione</option>
+										<option value="AC">Acre</option>
+										<option value="AL">Alagoas</option>
+										<option value="AP">Amapá</option>
+										<option value="AM">Amazonas</option>
+										<option value="BA">Bahia</option>
+										<option value="CE">Ceará</option>
+										<option value="DF">Distrito Federal</option>
+										<option value="ES">Espírito Santo</option>
+										<option value="GO">Goiás</option>
+										<option value="MA">Maranhão</option>
+										<option value="MT">Mato Grosso</option>
+										<option value="MS">Mato Grosso do Sul</option>
+										<option value="MG">Minas Gerais</option>
+										<option value="PA">Pará</option>
+										<option value="PB">Paraíba</option>
+										<option value="PR">Paraná</option>
+										<option value="PE">Pernambuco</option>
+										<option value="PI">Piauí</option>
+										<option value="RJ">Rio de Janeiro</option>
+										<option value="RN">Rio Grande do Norte</option>
+										<option value="RS">Rio Grande do Sul</option>
+										<option value="RO">Rondônia</option>
+										<option value="RR">Roraima</option>
+										<option value="SC">Santa Catarina</option>
+										<option value="SP">São Paulo</option>
+										<option value="SE">Sergipe</option>
+										<option value="TO">Tocantins</option>
+									 </select>
+								</div>
+						</div>
+						
+						<div class="row">
+							<!--CAMPO DATA DE ENTRADA -->
+							<div class="col-md-3 mt-3">
+								<label for="validationCustom01">Data de Entrada</label>
+								<input type="date" class="form-control" id="validationCustom01" placeholder="Data de Entrada" required>
+								<div class="invalid-feedback">
+									Por favor, informe uma data válida.
+								</div>
+							</div>
+							
+							<!--CAMPO DATA DE SAÍDA -->
+							<div class="col-md-3 mt-3">
+								<label for="validationCustom01">Data de Saída</label>
+								<input type="date" class="form-control" id="validationCustom01" placeholder="Data de Saída" required>
+								<div class="invalid-feedback">
+									Por favor, informe uma data válida.
+								</div>
+							</div>
+						</div>
+						
+						<!--CAMPO DESCRIÇÃO DAS ATIVIDADES DESENVOLVIDAS-->
+						<div class="form-group mt-3">
+							<label for="exampleFormControlTextarea1">Descrição</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1 invalidCheck" rows="3" placeholder="Descreva as atividades desenvolvidas" required></textarea>
+						</div>
+						<div class="invalid-feedback">
+							 Você deve preencher este campo
+						 </div>
+						
+						<div class="col-md-8 mt-3">
+							<button type="button" class="btn btn-primary col-md-4">Adicionar experiência</button>
+							<button type="button" class="btn btn-primary col-md-4">Remover experiência</button>
+						</div>
+						  
+					</div>
+		</div>
+				<!--Item 5-->
+				<p>
+					<button class="btn btn-primary dropdown-toggle btn-block" style="width: 100%; margin-top: 20px;" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					Idiomas
+					</button>
+				</p>
+				<div class="collapse" id="collapseExample">
+					<div class="card card-body"> 
+				
+							<div class="row">
+								<!--CAMPO IDIOMA -->
+								<div class="col-md-3">
+									<label for="validationCustom03">Idioma</label>
+									<input type="text" class="form-control" id="validationCustom03" placeholder="Informe o idioma" required>
+									<div class="invalid-feedback">
+										Por favor, informe um nome de idioma válido.
+									</div>
+								</div>
+								
+							   <!--CAMPO NÍVEL-->
+								<div class="form-group col-md-3">
+									 <label for="inputEstado">Nível</label>
+									 <select id="inputEstado" class="form-control">
+										<option selected>Selecione</option>
+										<option value="Ini">Iniciante</option>
+										<option value="Bas">Básico</option>
+										<option value="Int">Intermediário</option>
+										<option value="Ava">Avançado/Fluente</option>
+									 </select>
+								</div>
+							</div>
+							<div class="col-md-6 mt-3">
+								<button type="button" class="btn btn-primary col-md-3">Adicionar idioma</button>
+								<button type="button" class="btn btn-primary col-md-3">Remover idioma</button>
+							</div>
+					</div>
+				</div>
+				
+				<!--Item 6-->
+				<p>
+					<button class="btn btn-primary dropdown-toggle btn-block" style="width: 100%; margin-top: 20px;" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					Cursos Complementares
+					</button>
+				</p>
+				<div class="collapse" id="collapseExample">
+					<div class="card card-body"> 
+						<!--CAMPO NOME DO CURSO -->
+						<div class="col-md-6 mt-3">
+							<label for="validationCustom03">Nome do curso</label>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="Informe o nome do curso" required>
+							<div class="invalid-feedback">
+								Por favor, informe um nome de curso válido.
+							</div>
+						</div>
+						<!--CAMPO Instituição de Ensino -->
+						<div class="col-md-6 mt-3">
+							<label for="validationCustom03">Instituição de Ensino</label>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="Informe o nome da instituição de ensino" required>
+							<div class="invalid-feedback">
+								Por favor, informe uma carga horária válida.
+							</div>
+						</div>
+						<!--CAMPO CARGA HORÁRIA -->
+						<div class="col-md-6 mt-3">
+							<label for="validationCustom03">Carga Horária</label>
+							<input type="text" class="form-control" id="validationCustom03" placeholder="Informe a carga horária" required>
+							<div class="invalid-feedback">
+								Por favor, informe um nome de Instituição válido.
+							</div>
+						</div>
+						<!--CAMPO DATA DE CONCLUSÃO -->
+						<div class="col-md-3 mt-3">
+							<label for="validationCustom01">Data de conclusão</label>
+							<input type="date" class="form-control" id="validationCustom01" placeholder="Data de Conclusão" required>
+							<div class="invalid-feedback">
+								Por favor, informe uma data válida.
+							</div>
+						</div>
+						
+						<div class="col-md-6 mt-3">
+							<button type="button" class="btn btn-primary col-md-3">Adicionar curso</button>
+							<button type="button" class="btn btn-primary col-md-3">Remover curso</button>
+						</div>
+
+							
+						
+					</div>
+				</div>
+				
+				<!--CAMPO CONCORDO COM OS TERMOS...-->
+				<div class="form-group mt-3" >
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+						<label class="form-check-label" for="invalidCheck">
+							Concordo com os termos e condições
+						</label>
+						<div class="invalid-feedback">
+							Você deve concordar, antes de continuar.
+						</div>
+					</div>
+				</div>           
+							
+							
+				<button class="btn btn-primary mt-3" type="submit">Finalizar cadastro</button>
+				
+							
+						<script>
+							// Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+							(function() {
+							'use strict';
+							window.addEventListener('load', function() {
+								// Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+								var forms = document.getElementsByClassName('needs-validation');
+								// Faz um loop neles e evita o envio
+								var validation = Array.prototype.filter.call(forms, function(form) {
+								form.addEventListener('submit', function(event) {
+									if (form.checkValidity() === false) {
+									event.preventDefault();
+									event.stopPropagation();
+									}
+									form.classList.add('was-validated');
+								}, false);
+								});
+							}, false);
+							})();
+						</script>
+		    </form>
+{% endblock %}
