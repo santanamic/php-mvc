@@ -1,0 +1,7 @@
+INSERT INTO `tb_empresa`(`Ds_Nome`, `Nr_CNPJ`, `Ds_Empresa`, `Ds_Setor`, `Nr_Telefone`, `Ds_Senha`, `Ds_Pais`, `Ds_Rua`, `Ds_Estado`, `Ds_Cidade`, `Ds_Complemento`, `Ds_Bairro`, `Nr_CEP`) VALUES ('Lojas Renner',00000000000100,'A Renner é a maior varejista de moda do Brasil. A companhia, constituída em 1965, foi a primeira corporação brasileira com 100% das ações negociadas em bolsa e está listada no Novo Mercado, grau mais elevado dentre os níveis diferenciados de governança corporativa da B3.
+
+A Renner conta com uma cultura corporativa sólida que se reflete nas lojas espalhadas por todos os estados brasileiros. Os princípios e valores da empresa norteiam a incessante busca por melhores práticas, encantamento de todos os seus públicos e maior rentabilidade. A Renner oferece um ambiente corporativo para “todos os estilos de carreira”.','Varejo',41215501,'123','BR','Dom Pedro','SP','São Paulo','N/D','Morumbi', 06550000)
+
+
+
+INSERT INTO `tb_vagas`(`Dt_Criacao`, `Ds_Funcao`, `Ds_RegimeContratacao`, `Ds_Local`, `Ds_Beneficios`, `Qt_Candidatos`, `Qt_Visualizacoes`, `Qt_Vagas`, `Ds_Jornada`, `Ds_Requisitos`, `Ds_Vaga`, `Ds_Status`, `Qt_LimiteCandidaturas`, `Vl_Salario`, `Ds_HorarioTrabalho`, `ID_Empresa`) VALUES ('12-12-12','Repositor','CLT','São Paulo - SP','N/D',0,0,0,'','','','',0,0,'',1)

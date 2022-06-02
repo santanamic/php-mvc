@@ -17,61 +17,20 @@
 		
 		<!--Instalação da biblioteca de ícones CDN do FontAwesome-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		
-		<title>{% block title %}{% endblock %}</title>
-		<script>
-		
-		function openProfile() {
 
-   if (document.getElementsByClassName("menuProfile")[0].style.display == "" || document.getElementsByClassName("menuProfile")[0].style.display === "none") {
-
-      document.getElementsByClassName("menuProfile")[0].style.display = "flex";
-      document.getElementById("menuOpen").style.display = "none";
-      document.getElementById("menuClose").style.display = "flex";
-      
-
-   } else {
-
-      document.getElementsByClassName("menuProfile")[0].style.display = "none";
-      document.getElementById("menuOpen").style.display = "flex";
-      document.getElementById("menuClose").style.display = "none";
-
-   }
-  
-}
-
-function openJob(){
-
-  if(document.getElementsByClassName("vaga")[0].style.display == "none"){
-
-   document.getElementsByClassName("vaga")[0].style.display = "inline";
-
-  }else{
-
-   document.getElementsByClassName("vaga")[0].style.display = "none";
- 
-
-  }
-
-}
-		</script>
 	</head>
-    <title></title>
+    <title>{% block title %}{% endblock %}</title>
 	
 	<style>
 body {
     background: #f1f1f175;
 }
 
-.container {
-    max-width: 1200px;
-}
-
-header, footer {
+header {
     background: #ffffff;
 }
 
-header hr, footer hr {
+header hr {
     margin: 0;
     background: #c5c5c4;
 }
@@ -351,29 +310,8 @@ header {
 			<hr>
 		</header>
 	</div>
-    
-	<div class="container">
-		{% block body %}
-		{% endblock %}
-	</div>
-	
-	<footer class="fixed-bottom">
-		<hr>
-		<div class="site-footer">
-			<div class="footerCenter">
-				<div style="display:none">
-					<img class="pb-3" src="http://anyjobs.com.br/img/logo_footer.svg"><br>
-					<div class="caminhar">
-						<a class="mx-5" href="">Notícias</a>
-						<a class="mx-5" href="">Blog</a>
-						<a class="mx-5" href="">Sobre Nós</a>
-					</div>
-					<hr>
-				</div>
-				<div class="user-select-none m-3">©2022. Todos os direitos reservados</div>
-			</div>
-		</div>
-	</footer>
+    {% block body %}
+    {% endblock %}
 	
 	<!--Global JavaScript-->
 	<script src="http://anyjobs.com.br/dist/js/main.js"></script>

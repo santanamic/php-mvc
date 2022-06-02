@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Jobs{% endblock %}
+
+{% block body %}
+
+
+<!--
+<ul>
+    {% for job in jobs %}
+        <li>{{ job.vaga_id }}</li>
+        <li>{{ job.vaga_funcao }}</li>
+        <li>{{ job.vaga_descricao }}</li>
+        <li>{{ job.vaga_salario }}</li>
+        <li>{{ job.vaga_horario }}</li>
+        <li>{{ job.vaga_local }}</li>
+        <li>{{ job.empresa_setor }}</li>
+        <li>{{ job.empresa_descricao }}</li>
+        <li></li>
+        <li></li>
+    {% endfor %}
+</ul>	
+!-->  
+ <br>
+ <br>
+ <br>
+ {% for job in jobs %}
+	<div class="row">
+		<span onclick="openJob()" class="col-md-6 col-sm-12">
+			<div class="border border-secondary border-1 rounded-3">
+				<div class="p-3">
+					<h2>{{ job.vaga_funcao }}</h2>
+					<p>{{ job.empresa_nome }}</p>
+					<span>{{ job.vaga_jornada }}</span>
+					<span>{{ job.empresa_cidade }}, {{ job.empresa_estado }}</span>
+					<p>{{ job.vaga_descricao }}</p>
+				</div>
+			</div>
+		</span>
+		<div class="border border-secondary border-1 rounded-3 col-md-6 col-sm-12 vaga">
+			<div class="p-3">
+				<h2>{{ job.vaga_funcao }}</h2>
+				<p>{{ job.empresa_nome }}</p>
+				<div class="d-flex justify-content-between">
+					<div>
+						<span>{{ job.vaga_jornada }}</span>
+						<span>{{ job.empresa_cidade }}, {{ job.empresa_estado }}</span>
+					</div>
+					<button class="btn btn-primary">Inscrever-se</button>
+				</div>
+				<div class="nav_tabs">
+					<ul class="d-flex flex-direction-row ">
+						<li>
+							<input type="radio" name="tabs" class="rd_tabs" id="tab1" checked="">
+							<label for="tab1">Vaga</label>
+							<div class="content">{{ job.vaga_descricao }}</div>
+						</li>
+						<li>
+							<input type="radio" name="tabs" class="rd_tabs" id="tab2">
+							<label for="tab2">Empresa</label>
+							<div class="content">{{ job.empresa_descricao }}</div>
+						</li>
+						<li>
+							<input type="radio" name="tabs" class="rd_tabs" id="tab3">
+							<label for="tab3">Avaliações</label>
+							<div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam inventore impedit sapiente molestias, tempora odit ea eius itaque, deleniti voluptatum perferendis doloribus totam. Ducimus similique magnam saepe odit ut libero autem, suscipit excepturi cupiditate odio, voluptate blanditiis totam doloribus sed!</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+  {% endfor %}
+{% endblock %}

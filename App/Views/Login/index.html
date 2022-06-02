@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AnyJobs</title>
+    
+		<!--Global CSS-->
+		<link rel="stylesheet" href="http://anyjobs.com.br/dist/css/main.css"/>
+
+		<!--Instalação das Fontes do Google-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+		
+		<!--Instalação da biblioteca de ícones CDN do FontAwesome-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+<body>
+
+    <div class="d-flex justify-content-center align-items-center"
+        style="background-image: url('http://anyjobs.com.br/img/background-login.svg'); height: 100vh;">
+        <div class="d-flex justify-content-center ">
+            <div class="bg-light border border-dark rounded p-5 mt-5">
+
+
+				<img class="logo" src="http://anyjobs.com.br/img/logo.svg">
+
+                <div class="text-center">
+
+                    <p id="subtitle"><b>Entre no seu perfil ou cadastre-se</b></p>
+
+
+                    <p id="title">Bem vindo(a) ao AnyJobs!</p>
+
+                </div>
+
+                <form action="/action_page.php" method="GET">
+
+                    <div class="forms_inputs">
+
+                        <label for="e-mail"><b>E-mail</b></label><br>
+                        <input class="w-100 rounded border border-secondary" type="text" id="e-mail" name="e-mail">
+
+                        <br>
+
+                        <div class="mt-2">
+                            <label for="senha"><b>Senha</b></label><br>
+                            <input class="w-100 rounded border border-secondary" type="password" id="senha"
+                                name="senha">
+                        </div>
+                    </div>
+
+
+                    <p class="mt-2"><a class="link-primary text-decoration-none" href="">Esqueceu sua senha?</a></p>
+
+
+
+                    <div class="text-center mt-4">
+                        <input class="btn btn-primary " type="submit" value="Enviar">
+                    </div>
+
+                </form>
+
+
+
+                <p class="float-end mt-5"><a class="link-primary text-decoration-none" href="">Primeiro Acesso</a></p>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
